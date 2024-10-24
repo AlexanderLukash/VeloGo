@@ -9,5 +9,7 @@ services:
     command: python manage.py runserver 0.0.0.0:${DJANGO_PORT}
     env_file:
       - ../.env
+    depends_on:
+      - postgres
     volumes:
       - ..:/app
